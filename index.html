@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<HTML lang="PT-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Enquete</title>
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1 id="title">Enquete - gusty.dev</h1>
+        <p id="description">Por favor, responda as seguintes perguntas:</p>
+        <form id="survey-form">
+            <label for="name" id="name-label">Nome*: </label><input required id="name" type="text" placeholder="Fulano de Tal">
+            <label for='email' id="email-label">E-mail*: </label><input required id="email" type="email" placeholder="fulano@email.com">
+            <label for="number" id="number-label">Idade: </label><input id="number" type="number" min="0" max="200" placeholder="42">
+            <p>Local:</p>
+            <select required id="dropdown" name="dr" class="form-control">
+                <option>Selecionar um local</option>
+                <option>Brasil</option>
+                <option>Internacional / Outro</option>
+            </select>
+            <p>Você recomendaria o gusty.dev para um amigo?</p>
+            <label>
+                <input name='user-rec' value='sim' type="radio">Com certeza
+                <input name='user-rec' value='talvez' type="radio">Talvez
+                <input name='user-rec' value='não' type="radio">Nunca
+            </label>
+            <p>O que você gostaria de ver melhorado no gusty.dev?</p>
+            <label>
+                <input value="atendimento" type="checkbox">Atendimento
+                <input value="qualidade" type="checkbox">Qualidade
+                <input value="diversidade" type="checkbox">Diversidade
+                <input value="outros" type="checkbox">Outros
+            </label>
+            <p>Algum comentário adicional? Escreva abaixo: </p>
+            <textarea value="comments"></textarea>
+            <button id="submit">Enviar</button>
+        </form>
+
+    </body>
+</HTML>
