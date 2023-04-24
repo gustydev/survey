@@ -7,34 +7,35 @@
     </head>
     <body>
         <h1 id="title">Enquete - gusty.dev</h1>
-        <p id="description">Por favor, responda as seguintes perguntas:</p>
+        <p id="description">Por favor, responda as seguintes perguntas para melhorar nosso serviço</p>
         <form id="survey-form">
+            <fieldset>
             <label for="name" id="name-label">Nome*: </label><input required id="name" type="text" placeholder="Fulano de Tal">
             <label for='email' id="email-label">E-mail*: </label><input required id="email" type="email" placeholder="fulano@email.com">
             <label for="number" id="number-label">Idade: </label><input id="number" type="number" min="0" max="200" placeholder="42">
             <p>Local:</p>
             <select required id="dropdown" name="dr" class="form-control">
-                <option>Selecionar um local</option>
-                <option>Brasil</option>
-                <option>Internacional / Outro</option>
+                <option value="">Selecionar um local</option>
+                <option value="BR">Brasil</option>
+                <option value="INTL">Internacional / Outro</option>
             </select>
+            </fieldset>
+            <fieldset>
             <p>Você recomendaria o gusty.dev para um amigo?</p>
-            <label>
-                <input name='user-rec' value='sim' type="radio">Com certeza
-                <input name='user-rec' value='talvez' type="radio">Talvez
-                <input name='user-rec' value='não' type="radio">Nunca
-            </label>
+                <label><input id='sim' name='user-rec' value='sim' type="radio">Com certeza</label>
+                <label><input id='talvez' name='user-rec' value='talvez' type="radio">Talvez</label>
+                <label><input id='não' name='user-rec' value='não' type="radio">Nunca</label>
             <p>O que você gostaria de ver melhorado no gusty.dev?</p>
-            <label>
-                <input value="atendimento" type="checkbox">Atendimento
-                <input value="qualidade" type="checkbox">Qualidade
-                <input value="diversidade" type="checkbox">Diversidade
-                <input value="outros" type="checkbox">Outros
-            </label>
+            <label><input class='inline'value="atendimento" type="checkbox">Atendimento</label>
+            <label><input value="qualidade" type="checkbox">Qualidade</label>
+            <label><input value="diversidade" type="checkbox">Diversidade</label>
+            <label><input value="outros" type="checkbox">Outros</label>
+            </fieldset>
+            <fieldset>
             <p>Algum comentário adicional? Escreva abaixo: </p>
             <textarea value="comments"></textarea>
             <button id="submit">Enviar</button>
+            </fieldset>
         </form>
-
     </body>
 </HTML>
